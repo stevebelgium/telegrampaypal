@@ -5,14 +5,14 @@ import paypalrestsdk
 
 # Define constants for PayPal configuration
 PAYPAL_MODE = 'sandbox' # 'live' if using real PayPal account
-PAYPAL_CLIENT_ID = credentials.paypal_client_id
-PAYPAL_CLIENT_SECRET = credentials.paypal_client_secret
+PAYPAL_CLIENT_ID = "<<your_paypal_client_id>>"
+PAYPAL_CLIENT_SECRET = "<your_paypal_client_secret>>"
 
 # Initialize PayPal SDK
 paypalrestsdk.configure({
   'mode': PAYPAL_MODE,
-  'client_id': "<<your_paypal_client_id>>",
-  'client_secret': "<<your_paypal_client_secret>>"
+  'client_id': PAYPAL_CLIENT_ID,
+  'client_secret': PAYPAL_CLIENT_SECRET
 })
 
 # Define conversation states
@@ -133,7 +133,7 @@ def main():
 	"""Main function to start the bot and handle commands"""
 	
 	# Create the Updater and pass it your bot's token.
-	updater = Updater("<<your_telegram_api_key>>")
+	updater = Updater("<your_telegram_api_key>>")
 
 	# Get the dispatcher to register handlers
 	dispatcher = updater.dispatcher
