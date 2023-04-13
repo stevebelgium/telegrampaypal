@@ -1,3 +1,6 @@
+# Import the credentials module
+import credentials
+
 import telegram
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, CallbackQueryHandler, ConversationHandler
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update, ParseMode
@@ -133,7 +136,7 @@ def main():
 	"""Main function to start the bot and handle commands"""
 	
 	# Create the Updater and pass it your bot's token.
-	updater = Updater("<your_telegram_api_key>>")
+	updater = Updater(credentials.telegram_api_key)
 
 	# Get the dispatcher to register handlers
 	dispatcher = updater.dispatcher
