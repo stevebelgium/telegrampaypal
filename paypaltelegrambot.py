@@ -8,15 +8,15 @@ import paypalrestsdk
 
 # Define constants for PayPal configuration
 PAYPAL_MODE = 'sandbox' # 'live' if using real PayPal account
-PAYPAL_CLIENT_ID = "<<your_paypal_client_id>>"
-PAYPAL_CLIENT_SECRET = "<your_paypal_client_secret>>"
+PAYPAL_CLIENT_ID = credentials.paypal_client_id
+PAYPAL_CLIENT_SECRET = credentials.paypal_client_secret
 
 # Initialize PayPal SDK
 paypalrestsdk.configure({
   'mode': PAYPAL_MODE,
   'client_id': PAYPAL_CLIENT_ID,
   'client_secret': PAYPAL_CLIENT_SECRET
-})
+}) #kjldskjjdsjdsk
 
 # Define conversation states
 PAYMENT_AMOUNT, PAYMENT_CONFIRMATION = range(2)
